@@ -93,3 +93,9 @@ INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'u
 [Hello World Python/hello-world] Cleaning up container for job hello-world
 [Hello World Python/hello-world]   ✅  Success - Complete job
 [Hello World Python/hello-world] 🏁  Job succeeded
+
+
+act push -W .github/workflows/hello-world.yaml --container-architecture linux/amd64 -P ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest
+
+Localhost - use --bind and do NOT checkout repo
+act push -W .github/workflows/hello-world.yaml --bind --container-architecture linux/amd64
